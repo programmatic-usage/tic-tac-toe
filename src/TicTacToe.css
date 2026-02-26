@@ -1,16 +1,16 @@
-/* CSS Variables for theming */
+/* CSS Variables for theming - AMBER THEME */
 :root {
-  --color-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  --color-surface: rgba(255, 255, 255, 0.05);
-  --color-surface-hover: rgba(255, 255, 255, 0.1);
-  --color-border: rgba(255, 255, 255, 0.1);
-  --color-x: #ff6b6b;
-  --color-o: #4ecdc4;
-  --color-text: #e8e8e8;
-  --color-text-muted: #a0a0a0;
-  --shadow-glow-x: 0 0 20px rgba(255, 107, 107, 0.5);
-  --shadow-glow-o: 0 0 20px rgba(78, 205, 196, 0.5);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --color-bg: linear-gradient(135deg, #2c1810 0%, #4a2511 50%, #78350f 100%);
+  --color-surface: rgba(251, 191, 36, 0.08);
+  --color-surface-hover: rgba(251, 191, 36, 0.15);
+  --color-border: rgba(251, 191, 36, 0.2);
+  --color-x: #f59e0b;
+  --color-o: #d97706;
+  --color-text: #fef3c7;
+  --color-text-muted: #d97706;
+  --shadow-glow-x: 0 0 20px rgba(245, 158, 11, 0.5);
+  --shadow-glow-o: 0 0 20px rgba(217, 119, 6, 0.5);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
   --radius-sm: 12px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -83,7 +83,7 @@ body {
   display: flex;
   gap: 8px;
   justify-content: center;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .title-x {
@@ -97,13 +97,13 @@ body {
 }
 
 @keyframes pulseX {
-  0%, 100% { text-shadow: 0 0 20px rgba(255, 107, 107, 0.5); }
-  50% { text-shadow: 0 0 40px rgba(255, 107, 107, 0.8); }
+  0%, 100% { text-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
+  50% { text-shadow: 0 0 40px rgba(245, 158, 11, 0.8); }
 }
 
 @keyframes pulseO {
-  0%, 100% { text-shadow: 0 0 20px rgba(78, 205, 196, 0.5); }
-  50% { text-shadow: 0 0 40px rgba(78, 205, 196, 0.8); }
+  0%, 100% { text-shadow: 0 0 20px rgba(217, 119, 6, 0.5); }
+  50% { text-shadow: 0 0 40px rgba(217, 119, 6, 0.8); }
 }
 
 .game-subtitle {
@@ -173,7 +173,7 @@ body {
 
 .x-score .score-value { color: var(--color-x); }
 .o-score .score-value { color: var(--color-o); }
-.draw-score .score-value { color: var(--color-text-muted); }
+.draw-score .score-value { color: #fbbf24; }
 
 /* Status Bar */
 .status-bar {
@@ -203,19 +203,19 @@ body {
 }
 
 .status-bar.winner {
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
-  border-color: rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(245, 158, 11, 0.25));
+  border-color: rgba(251, 191, 36, 0.6);
   animation: winnerPulse 1s ease-in-out infinite;
 }
 
 .status-bar.draw {
-  background: linear-gradient(135deg, rgba(160, 160, 160, 0.2), rgba(128, 128, 128, 0.2));
-  border-color: rgba(160, 160, 160, 0.5);
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.2), rgba(180, 83, 9, 0.2));
+  border-color: rgba(217, 119, 6, 0.5);
 }
 
 @keyframes winnerPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); }
 }
 
 .status-icon {
@@ -266,10 +266,10 @@ body {
 /* Win Line */
 .win-line {
   position: absolute;
-  background: linear-gradient(90deg, #ffd700, #ffed4a, #ffd700);
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
   height: 6px;
   border-radius: 3px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.9), 0 0 40px rgba(251, 191, 36, 0.5);
   z-index: 10;
   animation: drawLine 0.5s ease-out forwards;
 }
@@ -333,7 +333,7 @@ body {
   width: calc(100% - 32px);
   height: calc(100% - 32px);
   background: none;
-  border: 6px solid #ffd700;
+  border: 6px solid #fbbf24;
   border-radius: var(--radius-lg);
 }
 
@@ -343,7 +343,7 @@ body {
   width: calc(100% - 32px);
   height: calc(100% - 32px);
   background: none;
-  border: 6px solid #ffd700;
+  border: 6px solid #fbbf24;
   border-radius: var(--radius-lg);
   transform: rotate(0deg);
 }
@@ -352,7 +352,7 @@ body {
 .cell {
   aspect-ratio: 1;
   width: 100px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(251, 191, 36, 0.05);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -369,7 +369,7 @@ body {
 .cell:hover:not(:disabled) {
   background: var(--color-surface-hover);
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(251, 191, 36, 0.4);
 }
 
 .cell:active:not(:disabled) {
@@ -381,22 +381,22 @@ body {
 }
 
 .cell.filled {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(251, 191, 36, 0.12);
 }
 
 .cell.winning {
-  background: rgba(255, 215, 0, 0.2);
-  border-color: #ffd700;
+  background: rgba(251, 191, 36, 0.25);
+  border-color: #fbbf24;
   animation: winPulse 0.6s ease-in-out infinite;
 }
 
 @keyframes winPulse {
   0%, 100% { 
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
     transform: scale(1);
   }
   50% { 
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.8);
     transform: scale(1.02);
   }
 }
@@ -460,21 +460,21 @@ body {
   justify-content: center;
   gap: 8px;
   padding: 16px 32px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   border: none;
   border-radius: 50px;
-  color: white;
+  color: #2c1810;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition-medium);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
   animation: slideUp 0.5s ease-out 0.5s both;
 }
 
 .reset-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.6);
 }
 
 .reset-btn:active {
@@ -487,10 +487,10 @@ body {
 
 @keyframes btnPulse {
   0%, 100% { 
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
   }
   50% { 
-    box-shadow: 0 4px 30px rgba(102, 126, 234, 0.8);
+    box-shadow: 0 4px 30px rgba(245, 158, 11, 0.8);
   }
 }
 
@@ -540,7 +540,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 70%);
   animation: particleGlow 1s ease-in-out infinite;
 }
 
